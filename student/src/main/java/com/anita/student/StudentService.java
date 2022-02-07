@@ -3,7 +3,7 @@ package com.anita.student;
 import org.springframework.stereotype.Service;
 
 @Service
-public record StudentService() {
+public record StudentService(StudentRepository studentRepository) {
     public void registerStudent(StudentRegistrationRequest request) {
         Student student = Student.builder()
                 .firstName(request.firstName())
@@ -12,6 +12,7 @@ public record StudentService() {
                 .build();
 
         // TODO: Validate Request
-        // TODO: Store Student in DB
+
+        studentRepository.save(student);
     }
 }
