@@ -7,7 +7,7 @@ spring:
 
   datasource:
     username: 'postgres'
-    url: jdbc:postgresql://localhost:5432/customer
+    url: jdbc:postgresql://localhost:5432/student
     password: 'postgres'
   jpa:
     properties:
