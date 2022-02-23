@@ -11,6 +11,7 @@
 
   <modules>
     <module>student</module>
+    <module>plagiarism</module>
   </modules>
 
   <name>anitaservices</name>
