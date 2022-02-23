@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: plagiarism
+  datasource:
+    username: 'postgres'
+    url: jdbc:postgresql://localhost:5432/plagiarism
+    password: 'postgres'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: 'true'
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
