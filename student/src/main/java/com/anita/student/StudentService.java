@@ -15,7 +15,7 @@ public record StudentService(StudentRepository studentRepository, RestTemplate r
         // TODO: Validate Request
         studentRepository.saveAndFlush(student);
         PlagiarismCheckResponse plagiarismCheckResponse = restTemplate.getForObject(
-                "http://localhost:8081/api/v1/plagiarism-check/{studentId}",
+                "http://PLAGIARISM/api/v1/plagiarism-check/{studentId}",
                 PlagiarismCheckResponse.class,
                 student.getId()
         );
